@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!--http://www.lawebdelprogramador.com-->
+	<title>Calendario</title>
+	<link rel="stylesheet" type="text/css" href="CSS/Calendario.css">
+	<link rel="stylesheet" type="text/css" href="CSS/popup.css">
+	<meta charset="utf-8">
+	<style>
+
+	</style>
+</head>
+<body>
+<div>
+	
+<table id="calendar" align="center">
+	<caption></caption>
+	<thead>
+		<tr>
+			<th>Lun</th><th>Mar</th><th>Mie</th><th>Jue</th><th>Vie</th><th>Sab</th><th>Dom</th>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span><h2 id="titulobutaca"></h2></span><br>
+    <span class="close">&times;</span>
+    <input type="text" id="nombreest" placeholder="Nombre del estudiante"><br>
+    <input type="text" id="carnet" placeholder="Carnet">
+    <input type="text" id="seccion" placeholder="Sección">
+    <button id="guardar" onclick="guardardatosdelabutaca()">Guardar</button>
+  
+  </div>
+
+</div>
+</div>
+<button id="boton" onclick="cargarpeliculasdelmessyanno()">Guardar</button>
+ 
+ 
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="Calendario.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+<script>
+var actual=new Date();
+function mostrarCalendario(year,month){
+	var now=new Date(year,month-1,1);
+	var last=new Date(year,month,0);
+	var primerDiaSemana=(now.getDay()==0)?7:now.getDay();
+	var ultimoDiaMes=last.getDate();
+	var dia=0;
+	var resultado="<tr>";
+	var diaActual=0;
+	console.log(ultimoDiaMes);
+ 
+	var last_cell=primerDiaSemana+ultimoDiaMes;
+ 
+	// hacemos un bucle hasta 42, que es el máximo de valores que puede
+	// haber... 6 columnas de 7 dias
+	for(var i=1;i<=42;i++){
+		if(i==primerDiaSemana){
+			// determinamos en que dia empieza
+			dia=1;
+		}
+		if(i<primerDiaSemana || i>=last_cell){
+			// celda vacia
+			resultado+="<td>&nbsp;</td>";
+		}else{
+			// mostramos el dia
+			if(dia==actual.getDate() && month==actual.getMonth()+1 && year==actual.getFullYear())
+				resultado+="<td class='hoy' id='"+dia+"'><button onclick='btn()'>"+dia+"</button></td>";
+			else
+				resultado+="<td id='"+dia+"'> <button onclick='btn()'>"+dia+"</button></td>";
+			dia++;
+		}
+		if(i%7==0){
+			if(dia>ultimoDiaMes)
+				break;
+			resultado+="</tr><tr>\n";
+		}
+	}
+	resultado+="</tr>";
+ 
+	var meses=Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+ 
+	// Calculamos el siguiente mes y año
+	nextMonth=month+1;
+	nextYear=year;
+	if(month+1>12){
+		nextMonth=1;
+		nextYear=year+1;
+	}
+ 
+	// Calculamos el anterior mes y año
+	prevMonth=month-1;
+	prevYear=year;
+	if(month-1<1){
+		prevMonth=12;
+		prevYear=year-1;
+	}
+ 
+	document.getElementById("calendar").getElementsByTagName("caption")[0].innerHTML="<div id='mesactual'>"+meses[month-1]+" </div><div id='annoactual'>"+year+"</div><div><a class='a' onclick='mostrarCalendario("+prevYear+","+prevMonth+")'>&lt;</a> <a class='a' onclick='mostrarCalendario("+nextYear+","+nextMonth+")'>&gt;</a></div>";
+	document.getElementById("calendar").getElementsByTagName("tbody")[0].innerHTML=resultado;
+}
+ 
+mostrarCalendario(actual.getFullYear(),actual.getMonth()+1);
+</script>
+</body>
+</html>

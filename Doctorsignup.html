@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Doctor - Sign Up</title>
+</head>
+<body>
+	<div>
+		<!--sign up-->
+		<h1>Creación de cuenta</h1>
+		<p>Usted está creando un perfil como doctor.</p>
+		<h2>Información de la cuenta</h2>
+		<p>Email</p>
+		<input type="email" id="email">
+		<p>Contraseña</p>
+		<input type="password" id="clave">
+
+		<h2>Información Personal</h2>
+			<p>Nombre Completo</p>
+			<input type="text"  id="nombre">
+			<p>Número de identificación</p>
+			<input type="number" id="cedula">
+			<p>Fecha de Nacimiento</p>
+			<input type="date" id="fechanac">
+			<p>Género</p>
+			<select id="genero">
+				<option value=""></option>
+				<option>Masculino</option>
+				<option>Femenino</option>
+				<option>Otro</option>
+				<option>No especifica</option>
+			</select>
+			<p>Número de teléfono</p>
+			<input type="number" id="numero">
+			<p>Domicilio</p>
+			<input type="text" id="domicilio">
+			<p>Fotografía</p>
+			<input type="file" name="" id="imagen">		
+		
+		<h2>Información Académica</h2>
+		<p>Lugar de Estudio</p>
+		<select id="estudios">
+			<option>FACO</option>
+			<option>UCIMED</option>
+			<option>UCR</option>
+			<option>ULACIT</option>
+			<option>UNA</option>
+			<option>Universidad Autónoma de Centro América</option>
+			<option>Universidad Hispanoamericana</option>
+			<option>Universidad Latina de Costa Rica</option>
+			<option>Universidad Magister</option>
+			<option>Universidad San Judas Tadeo</option>
+			<option>Universidad Santa Lucía</option>
+		</select>
+		<p>Especialidad que desempeñará dentro del consultorio</p>
+		<select id="area">
+			<option value=""></option>
+			<option>Alergología</option>
+			<option>Anestesiología y reanimación</option>
+			<option>Cardiología</option>
+			<option>Endocrinología</option>
+			<option>Gastroenterología</option>
+			<option>Geriatría</option>
+			<option>Hematología y hemoterapia</option>
+			<option>Infectología</option>
+			<option>Medicina de urgencias</option>
+			<option>Medicina física y rehabilitación</option>
+			<option>Medicina intensiva</option>
+			<option>Medicina interna</option>
+			<option>Medicina legal y forense</option>
+			<option>Medicina preventiva y salud pública</option>
+			<option>Medicina veterinaria</option>
+			<option>Nefrología</option>
+			<option>Neumología</option>
+			<option>Neurología</option>
+			<option>Nutriología</option>
+			<option>Oftalmología</option>
+			<option>Oncología médica</option>
+			<option>Oncología radioterápica</option>
+			<option>Pediatría</option>
+			<option>Psiquiatría</option>
+			<option>Rehabilitación</option>
+			<option>Reumatología</option>
+			<option>Toxicología</option>
+			<option>Urología</option>
+		</select>
+		<button onclick="guardardoctor()">Guardar</button>
+	</div>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="crearoacceder.js"></script>
+	<script type="text/javascript" src="clasedoctorfrontend.js"></script>
+</body>
+</html>

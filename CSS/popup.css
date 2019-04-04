@@ -1,0 +1,90 @@
+input{
+  text-align: center;
+  width: 280px;
+  height: 50px;
+  
+  margin-top: 2%;
+  margin-left: 37%;
+    
+  font-size: 16px;
+  font-family: "Bookman Old Style";
+  color: #5E6472;
+  
+  outline: none;
+  border: none;
+  
+  border-radius: 5px;
+}
+/* The Modal (background) */
+.modal{
+  visibility: hidden; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 500px; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  border-radius: 5px;
+	background-color: #9A2EFE;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Modal Content */
+.modal-content {
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+}
+#titulobutaca{
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-family: "Bookman Old Style";
+  text-align: center;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#sample{
+  height: 60px;
+  width: 60px;
+  border-style: none;
+  background: #F5A9A9;
+  border-radius: 5px;
+}
+#sample:hover{
+  background-color:white;
+}
+#guardar{
+  display: inline-block;
+  color: #252537;
+  
+  width: 280px;
+  height: 50px;
+  margin-left: 37%;
+  margin-top: 5%;
+  
+  padding: 0px;
+  background: #fff;
+  border-radius: 5px;
+   
+  outline: none;
+  border: none;
+  
+  cursor: pointer;
+  text-align: center;
+    
+  letter-spacing: 0.05em;
+  font-family: "Bookman Old Style";}
+/*FIN CSS DEL POPUP*/

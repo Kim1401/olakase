@@ -1,0 +1,74 @@
+body {
+	background-image: linear-gradient(to top, #9A2EFE 0%, #81F7F3 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+#calendar {
+	font-family:Arial;
+	font-size:12px;
+	margin-top: 5%;
+}
+#calendar caption {
+	text-align:left;
+	width: 518px;
+	height: 60px;
+    background-image: linear-gradient(-225deg, #F5A9A9 30%, #FA5882 70%);
+	font-size: 25px;
+	border-radius: 5px;
+	font-family: "Bookman Old Style";
+}
+#calendar caption div:nth-child(1) {float:left;}
+#calendar caption div:nth-child(2) {float:right;}
+#calendar caption div:nth-child(2) a {cursor:pointer;}
+#calendar th {
+	background-color: #FA5882;
+	color:#fff;
+	width: 43.1px;
+	width: 70px;
+	font-family: "Bookman Old Style";
+	border-radius: 5px;
+}
+#calendar td {
+	text-align:right;
+	padding:2px 5px;
+	height: 70px;
+	font-size: 20px;
+	background-color: #F5A9A9;
+	font-family: "Bookman Old Style";
+	border-radius: 5px;
+}
+#calendar .hoy {
+	background-color: #FA5882;
+}
+#boton{
+	border-style: none;
+	display: inline-block;
+    color: #252537;
+
+    width: 280px;
+    height: 50px;
+	margin-left: 40%;
+  	margin-top: 12px;
+
+    padding: 0px;
+    background: #fff;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+	cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+#boton:hover{
+	transform: translatey(3px);
+	box-shadow: none;
+}	
+.a{
+	margin-left: 140px;
+	cursor: pointer;
+}
+img{
+	cursor: pointer;
+}

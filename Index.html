@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Consultorio Médico</title>
+</head>
+<body>
+<!--Index del consultorio, la persona que ingresa indica si es un paciente o un doctor-->
+<!--Los doctores ven entre los consultorios disponibles, escogen uno y digitan su información-->
+<!--Los pacientes ven la información de los doctores e ingresan la cita-->
+	<!--Paleta de colores
+		gris/blanco : #ebf0f6
+		celeste : #98ccd3
+		azul claro : #364e68
+		azul oscuro : #132238-->
+	<h1>Consultorio Médico Mederi</h1>
+	<div>
+		<p>¿Eres un paciente o un doctor?</p>
+		<button onclick="paciente()">Paciente</button>
+		<p>Doctor</p>
+		<button onclick="login()">Log In</button>
+		<button onclick="signup()">Sign Up</button>
+	</div>
+
+<script>
+	function paciente(){
+		location.href = "Paciente.html";
+	}
+	function login(){
+		location.href = "Doctorlogin.html";
+	}
+	function signup(){
+		location.href = "Doctorsignup.html";
+	}
+</script>
+</body>
+</html>
